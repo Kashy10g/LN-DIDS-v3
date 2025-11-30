@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="dashboard-grid">
+  <div class="panel">
+    <h3>Quick Actions</h3>
+    <form method="POST" action="{{ url_for('run_custom_scan') }}">
+      <label>Target (IP or domain)</label>
+      <input type="text" name="target" placeholder="example.com or 192.168.1.10" required>
+
+      <label>Pick Tools</label>
+      <div class="tools-list">
+        {% for tool in tools %}
+          <label class="tool-item">
+            <input type="checkbox" name="tools" value="{{ tool }}" checked> {{ tool }}
+          </label>
+        {% endfor %}
+      </div>
+
+      <label>Email results to (optional)</label>
+      <input type="email" name="email_address" placeholder="you@example.com">
+
+      <div class="action-row">
+        <button class="btn-primary" type="submit">Run Full Scan</button>
+        <a class="btn-ghost" href="{{ url_for('scans') }}">Scan History</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h3>Recent Alerts</h3>
+    <table class="alerts-table">
+      <thead><tr><th>Time</th><th>Source</th><th>Level</th><th>Message</th></tr></thead>
+      <tbody>
+        {% if alerts %}
+          {% for a in alerts %}
+            <tr>
+              <td>{{ a['time'] }}</td>
+              <td>{{ a['source'] }}</td>
+              <td>{{ a['level'] }}</td>
+              <td>{{ a['message'] }}</td>
+            </tr>
+          {% endfor %}
+        {% else %}
+          <tr><td colspan="4">No alerts yet.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel wide">
+    <h3>Recent Reports</h3>
+    <ul class="report-list">
+      {% for r in reports %}
+        <li>
+          <a href="{{ url_for('get_report', filename=r) }}">{{ r }}</a>
+        </li>
+      {% else %}
+        <li>No reports yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

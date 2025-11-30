@@ -1,0 +1,28 @@
+# reporter.py
+import os
+from fpdf import FPDF
+from config import REPORTS_DIR
+
+class PDFReport:
+    def __init__(self, title="LN-DIDS Report"):
+        self.pdf = FPDF()
+        self.title = title
+
+    def generate_from_txt(self, txt_path, out_path=None):
+        with open(txt_path, "r", encoding="utf-8", errors="ignore") as f:
+            content = f.read()
+
+        self.pdf.add_page()
+        self.pdf.set_auto_page_break(auto=True, margin=15)
+        self.pdf.set_font("Arial", "B", 16)
+        self.pdf.cell(0, 10, self.title, ln=True, align="C")
+        self.pdf.ln(6)
+        self.pdf.set_font("Arial", size=10)
+        for line in content.splitlines():
+            # simple wrapping for long lines
+            self.pdf.multi_cell(0, 6, line)
+        if not out_path:
+            base = os.path.basename(txt_path).rsplit(".", 1)[0]
+            out_path = os.path.join(REPORTS_DIR, f"{base}.pdf")
+        self.pdf.output(out_path)
+        return out_path

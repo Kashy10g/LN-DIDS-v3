@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Logs</h2>
+<p>View latest scan logs in filesystem: <code>reports/logs/</code></p>
+<ul>
+  {% for f in logs %}
+    <li><a href="{{ url_for('static', filename='..') }}">{{ f }}</a></li>
+  {% else %}
+    <li>No logs yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+LN-DIDS Scan Report
+ID: c2dabd6a
+Target: 172.20.10.4
+Tools: nmap,tcpdump,sslscan
+Time: 2025-11-30T12:54:36.234269
+
+============================================================
+TOOL: nmap
+------------------------------------------------------------
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-30 07:54 EST
+Nmap scan report for 172.20.10.4
+Host is up (0.000010s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE    SERVICE
+80/tcp   open     http
+5000/tcp open     upnp
+9000/tcp filtered cslistener
+
+Nmap done: 1 IP address (1 host up) scanned in 1.60 seconds
+============================================================
+TOOL: tcpdump
+------------------------------------------------------------
+tcpdump: wlan0: You don't have permission to perform this capture on that device
+(socket: Operation not permitted)
+============================================================
+TOOL: sslscan
+------------------------------------------------------------
+[31mERROR: Could not open a connection to host 172.20.10.4 (172.20.10.4) on port 443 (connect: Connection refused).[0m
+Version: [32m2.1.5[0m
+OpenSSL 3.5.4 30 Sep 2025
+[0m

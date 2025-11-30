@@ -1,0 +1,23 @@
+LN-DIDS Report
+Scan ID: e5e69b28
+Target: 172.20.10.4
+Time (UTC): 20251129T182433Z
+
+================================================================================
+Tool: nmap
+
+$ nmap -sV -Pn 172.20.10.4
+
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-29 13:24 EST
+Nmap scan report for 172.20.10.4
+Host is up (0.000010s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE    SERVICE    VERSION
+80/tcp   open     http       Apache httpd 2.4.65 ((Debian))
+5000/tcp open     http       Werkzeug httpd 3.1.3 (Python 3.13.9)
+9000/tcp filtered cslistener
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.76 seconds
+
+

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Scan History</h2>
+<table class="simple-table">
+  <thead><tr><th>ID</th><th>Target</th><th>Tools</th><th>Status</th><th>Time</th></tr></thead>
+  <tbody>
+    {% for s in scans %}
+    <tr>
+      <td>{{ s['id'] }}</td>
+      <td>{{ s['target'] }}</td>
+      <td>{{ s['tools'] }}</td>
+      <td>{{ s['status'] }}</td>
+      <td>{{ s['created_at'] }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="5">No scans yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

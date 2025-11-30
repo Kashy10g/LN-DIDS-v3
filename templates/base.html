@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ title if title else "LN-DIDS v3" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="dark">
+    <header class="site-header">
+        <div class="brand">KashyCyber Tech — LN-DIDS v3</div>
+        <nav class="top-nav">
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('scans') }}">Scan History</a>
+            <a href="{{ url_for('logs') }}">Logs</a>
+            <a href="{{ url_for('settings') }}">Settings</a>
+            <a href="{{ url_for('backup') }}">Backup</a>
+            {% if session.get('user') %}
+                <a href="{{ url_for('logout') }}" class="right">Logout ({{ session.get('user') }})</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="page-body">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

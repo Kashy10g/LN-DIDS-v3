@@ -1,0 +1,11 @@
+LN-DIDS Scan Report
+ID: 9c18ebf0
+Target: 192.168.0.10
+Tools: tcpdump
+Time: 2025-11-30T07:42:02.213191
+
+============================================================
+TOOL: tcpdump
+------------------------------------------------------------
+tcpdump: wlan0: You don't have permission to perform this capture on that device
+(socket: Operation not permitted)

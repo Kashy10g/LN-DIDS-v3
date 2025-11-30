@@ -1,0 +1,19 @@
+LN-DIDS Scan Report
+ID: d7d0b6b3
+Target: 127.66.0.1
+Tools: nmap
+Time: 2025-11-30T07:39:30.786170
+
+============================================================
+TOOL: nmap
+------------------------------------------------------------
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-30 02:39 EST
+Nmap scan report for 127.66.0.1
+Host is up (0.000020s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+5000/tcp open  upnp
+9000/tcp open  cslistener
+
+Nmap done: 1 IP address (1 host up) scanned in 2.26 seconds

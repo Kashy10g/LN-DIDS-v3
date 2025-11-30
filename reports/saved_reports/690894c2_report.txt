@@ -1,0 +1,226 @@
+
+=== Running nmap on 192.168.0.10 ===
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-29 17:08 EST
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 3.10 seconds
+
+=== Running tcpdump on 192.168.0.10 ===
+ERROR: tcpdump: wlan0: You don't have permission to perform this capture on that device
+(socket: Operation not permitted)
+
+
+=== Running whatweb on 192.168.0.10 ===
+ERROR: /usr/bin/whatweb:257:in `require_relative': cannot load such file -- /usr/bin/lib/messages (LoadError)
+	from /usr/bin/whatweb:257:in `<main>'
+
+
+=== Running wafw00f on 192.168.0.10 ===
+
+                 ?              ,.   (   .      )        .      "
+         __        ??          ("     )  )'     ,'        )  . (`     '`
+    (___()'`;   ???          .; )  ' (( (" )    ;(,     ((  (  ;)  "  )")
+    /,___ /`                 _"., ,._'_.,)_(..,( . )_  _' )_') (. _..( ' )
+    \\   \\                 |____|____|____|____|____|____|____|____|____|
+
+                                ~ WAFW00F : v2.3.1 ~
+                    ~ Sniffing Web Application Firewalls since 2014 ~
+
+[*] Checking https://192.168.0.10
+ERROR: ERROR:wafw00f:Something went wrong HTTPSConnectionPool(host='192.168.0.10', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7efe7a5386e0>, 'Connection to 192.168.0.10 timed out. (connect timeout=7)'))
+ERROR:wafw00f:Site 192.168.0.10 appears to be down
+
+
+=== Running nikto on 192.168.0.10 ===
+- Nikto v2.5.0
+---------------------------------------------------------------------------
+
+   Options:
+       -ask+               Whether to ask about submitting updates
+                               yes   Ask about each (default)
+                               no    Don't ask, don't send
+                               auto  Don't ask, just send
+       -check6             Check if IPv6 is working (connects to ipv6.google.com or value set in nikto.conf)
+       -Cgidirs+           Scan these CGI dirs: "none", "all", or values like "/cgi/ /cgi-a/"
+       -config+            Use this config file
+       -Display+           Turn on/off display outputs:
+                               1     Show redirects
+                               2     Show cookies received
+                               3     Show all 200/OK responses
+                               4     Show URLs which require authentication
+                               D     Debug output
+                               E     Display all HTTP errors
+                               P     Print progress to STDOUT
+                               S     Scrub output of IPs and hostnames
+                               V     Verbose output
+       -dbcheck           Check database and other key files for syntax errors
+       -evasion+          Encoding technique:
+                               1     Random URI encoding (non-UTF8)
+                               2     Directory self-reference (/./)
+                               3     Premature URL ending
+                               4     Prepend long random string
+                               5     Fake parameter
+                               6     TAB as request spacer
+                               7     Change the case of the URL
+                               8     Use Windows directory separator (\)
+                               A     Use a carriage return (0x0d) as a request spacer
+                               B     Use binary value 0x0b as a request spacer
+        -followredirects   Follow 3xx redirects to new location
+        -Format+           Save file (-o) format:
+                               csv   Comma-separated-value
+                               json  JSON Format
+                               htm   HTML Format
+                               nbe   Nessus NBE format
+                               sql   Generic SQL (see docs for schema)
+                               txt   Plain text
+                               xml   XML Format
+                               (if not specified the format will be taken from the file extension passed to -output)
+       -Help              This help information
+       -host+             Target host/URL
+       -id+               Host authentication to use, format is id:pass or id:pass:realm
+       -ipv4                 IPv4 Only
+       -ipv6                 IPv6 Only
+       -key+              Client certificate key file
+       -list-plugins      List all available plugins, perform no testing
+       -maxtime+          Maximum testing time per host (e.g., 1h, 60m, 3600s)
+       -mutate+           Guess additional file names:
+       -mutate-options    Provide information for mutates
+       -nointeractive     Disables interactive features
+       -nolookup          Disables DNS lookups
+       -nossl             Disables the use of SSL
+       -noslash           Strip trailing slash from URL (e.g., '/admin/' to '/admin')
+       -no404             Disables nikto attempting to guess a 404 page
+       -Option            Over-ride an option in nikto.conf, can be issued multiple times
+       -output+           Write output to this file ('.' for auto-name)
+       -Pause+            Pause between tests (seconds)
+       -Plugins+          List of plugins to run (default: ALL)
+       -port+             Port to use (default 80)
+       -RSAcert+          Client certificate file
+       -root+             Prepend root value to all requests, format is /directory
+       -Save              Save positive responses to this directory ('.' for auto-name)
+       -ssl               Force ssl mode on port
+       -Tuning+           Scan tuning:
+                               1     Interesting File / Seen in logs
+                               2     Misconfiguration / Default File
+                               3     Information Disclosure
+                               4     Injection (XSS/Script/HTML)
+                               5     Remote File Retrieval - Inside Web Root
+                               6     Denial of Service
+                               7     Remote File Retrieval - Server Wide
+                               8     Command Execution / Remote Shell
+                               9     SQL Injection
+                               0     File Upload
+                               a     Authentication Bypass
+                               b     Software Identification
+                               c     Remote Source Inclusion
+                               d     WebService
+                               e     Administrative Console
+                               x     Reverse Tuning Options (i.e., include all except specified)
+       -timeout+          Timeout for requests (default 10 seconds)
+       -Userdbs           Load only user databases, not the standard databases
+                               all   Disable standard dbs and load only user dbs
+                               tests Disable only db_tests and load udb_tests
+       -useragent         Over-rides the default useragent
+       -until             Run until the specified time or duration
+       -url+              Target host/URL (alias of -host)
+       -usecookies        Use cookies from responses in future requests
+       -useproxy          Use the proxy defined in nikto.conf, or argument http://server:port
+       -Version           Print plugin and database versions
+       -vhost+            Virtual host (for Host header)
+       -404code           Ignore these HTTP codes as negative responses (always). Format is "302,301".
+       -404string         Ignore this string in response body content as negative response (always). Can be a regular expression.
+   		+ requires a value
+
+ERROR: + ERROR: No host (-host) specified
+
+
+=== Running sslscan on 192.168.0.10 ===
+Version: [32m2.1.5[0m
+OpenSSL 3.5.4 30 Sep 2025
+[0m
+ERROR: [31mERROR: Could not open a connection to host 192.168.0.10 (192.168.0.10) on port 443 (connect: Timed out).[0m
+
+
+=== Running dnsrecon on 192.168.0.10 ===
+ERROR: usage: dnsrecon [-h] [-d DOMAIN] [-iL INPUT_LIST] [-n NS_SERVER] [-r RANGE]
+                [-D DICTIONARY] [-f] [-a] [-s] [-b] [-y] [-k] [-w] [-z]
+                [--threads THREADS] [--lifetime LIFETIME]
+                [--loglevel {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--tcp]
+                [--db DB] [-x XML] [-c CSV] [-j JSON] [--iw]
+                [--disable_check_nxdomain] [--disable_check_recursion]
+                [--disable_check_bindversion] [-V] [-v] [-t TYPE]
+dnsrecon: error: unrecognized arguments: 192.168.0.10
+
+
+=== Running whois on 192.168.0.10 ===
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       192.168.0.0 - 192.168.255.255
+CIDR:           192.168.0.0/16
+NetName:        PRIVATE-ADDRESS-CBLK-RFC1918-IANA-RESERVED
+NetHandle:      NET-192-168-0-0-1
+Parent:         NET192 (NET-192-0-0-0-0)
+NetType:        IANA Special Use
+OriginAS:       
+Organization:   Internet Assigned Numbers Authority (IANA)
+RegDate:        1994-03-15
+Updated:        2024-05-24
+Comment:        These addresses are in use by many millions of independently operated networks, which might be as small as a single computer connected to a home gateway, and are automatically configured in hundreds of millions of devices.  They are only intended for use within a private context  and traffic that needs to cross the Internet will need to use a different, unique address.
+Comment:        
+Comment:        These addresses can be used by anyone without any need to coordinate with IANA or an Internet registry.  The traffic from these addresses does not come from ICANN or IANA.  We are not the source of activity you may see on logs or in e-mail records.  Please refer to http://www.iana.org/abuse/answers
+Comment:        
+Comment:        These addresses were assigned by the IETF, the organization that develops Internet protocols, in the Best Current Practice document, RFC 1918 which can be found at:
+Comment:        http://datatracker.ietf.org/doc/rfc1918
+Ref:            https://rdap.arin.net/registry/ip/192.168.0.0
+
+
+
+OrgName:        Internet Assigned Numbers Authority
+OrgId:          IANA
+Address:        12025 Waterfront Drive
+Address:        Suite 300
+City:           Los Angeles
+StateProv:      CA
+PostalCode:     90292
+Country:        US
+RegDate:        
+Updated:        2024-05-24
+Ref:            https://rdap.arin.net/registry/entity/IANA
+
+
+OrgTechHandle: IANA-IP-ARIN
+OrgTechName:   ICANN
+OrgTechPhone:  +1-310-301-5820 
+OrgTechEmail:  abuse@iana.org
+OrgTechRef:    https://rdap.arin.net/registry/entity/IANA-IP-ARIN
+
+OrgAbuseHandle: IANA-IP-ARIN
+OrgAbuseName:   ICANN
+OrgAbusePhone:  +1-310-301-5820 
+OrgAbuseEmail:  abuse@iana.org
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/IANA-IP-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+=== Running netcat on 192.168.0.10 ===
+ERROR: no port[s] to connect to
+

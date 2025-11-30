@@ -1,0 +1,7 @@
+
+=== Running nmap on 111111111111 ===
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-29 16:57 EST
+Nmap done: 0 IP addresses (0 hosts up) scanned in 2.35 seconds
+ERROR: Failed to resolve "111111111111".
+WARNING: No targets were specified, so 0 hosts scanned.
+
